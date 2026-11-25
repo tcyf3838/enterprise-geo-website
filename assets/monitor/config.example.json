@@ -1,0 +1,5 @@
+{
+  "secret": "REPLACE_WITH_64_HEX_CHARACTERS_FROM_RANDOM_BYTES_32",
+  "trusted_proxies": [],
+  "client_ip_header": "HTTP_X_REAL_IP"
+}

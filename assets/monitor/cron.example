@@ -1,0 +1,4 @@
+# Replace /srv/site and PHP path with the verified deployment paths.
+# HTTPS updating needs PHP OpenSSL and a valid CA bundle; allow_url_fopen must be on.
+23 3 * * * /usr/bin/php /srv/site/app/monitor/update_ranges.php /srv/site/private/monitor/ranges.json >> /srv/site/private/monitor/maintenance.log 2>&1
+43 3 * * * /usr/bin/php /srv/site/app/monitor/cli.php prune >> /srv/site/private/monitor/maintenance.log 2>&1

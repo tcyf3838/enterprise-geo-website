@@ -1,0 +1,544 @@
+{
+  "version": "2026-11-14",
+  "bots": [
+    {
+      "token": "GPTBot",
+      "provider": "OpenAI",
+      "purpose": "training",
+      "feed": "gptbot",
+      "kind": "ai",
+      "source": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "token": "OAI-SearchBot",
+      "provider": "OpenAI",
+      "purpose": "search",
+      "feed": "searchbot",
+      "kind": "ai",
+      "source": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "token": "ChatGPT-User",
+      "provider": "OpenAI",
+      "purpose": "user",
+      "feed": "chatgpt-user",
+      "kind": "ai",
+      "source": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "token": "ClaudeBot",
+      "provider": "Anthropic",
+      "purpose": "training",
+      "feed": "claude",
+      "kind": "ai",
+      "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "Claude-SearchBot",
+      "provider": "Anthropic",
+      "purpose": "search",
+      "feed": "claude",
+      "kind": "ai",
+      "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "Claude-User",
+      "provider": "Anthropic",
+      "purpose": "user",
+      "feed": "claude",
+      "kind": "ai",
+      "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "token": "PerplexityBot",
+      "provider": "Perplexity",
+      "purpose": "search",
+      "feed": "perplexitybot",
+      "kind": "ai",
+      "source": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+    },
+    {
+      "token": "Perplexity-User",
+      "provider": "Perplexity",
+      "purpose": "user",
+      "feed": "perplexity-user",
+      "kind": "ai",
+      "source": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+    },
+    {
+      "token": "Bytespider",
+      "provider": "字节跳动（UA 声明）",
+      "purpose": "other",
+      "feed": "",
+      "kind": "other"
+    },
+    {
+      "token": "Baiduspider",
+      "provider": "百度搜索（UA 声明）",
+      "purpose": "other",
+      "feed": "",
+      "kind": "other"
+    },
+    {
+      "token": "bingbot",
+      "provider": "Bing 搜索（UA 声明）",
+      "purpose": "other",
+      "feed": "",
+      "kind": "other"
+    },
+    {
+      "token": "Googlebot",
+      "provider": "Google 搜索（UA 声明）",
+      "purpose": "other",
+      "feed": "",
+      "kind": "other"
+    },
+    {
+      "token": "Claude-Agent",
+      "provider": "Anthropic",
+      "purpose": "agent",
+      "feed": "",
+      "kind": "ai",
+      "source": "https://support.claude.com/en/articles/18234133",
+      "note": "托管浏览器；官方 SAIL 清单格式尚未接入，不复用 Claude 爬虫地址清单。"
+    },
+    {
+      "token": "MistralAI-User",
+      "provider": "Mistral",
+      "purpose": "user",
+      "feed": "mistral-user",
+      "kind": "ai",
+      "source": "https://docs.mistral.ai/robots",
+      "note": ""
+    },
+    {
+      "token": "MistralAI-Index",
+      "provider": "Mistral",
+      "purpose": "search",
+      "feed": "mistral-index",
+      "kind": "ai",
+      "source": "https://docs.mistral.ai/robots",
+      "note": ""
+    },
+    {
+      "token": "MistralAI-Training",
+      "provider": "Mistral",
+      "purpose": "training",
+      "feed": "",
+      "kind": "ai",
+      "source": "https://docs.mistral.ai/robots",
+      "note": "官方列出 UA；本规则未接入训练爬虫专用地址清单。"
+    },
+    {
+      "token": "Google-GeminiNotebook",
+      "provider": "Gemini Notebook",
+      "purpose": "user",
+      "feed": "",
+      "kind": "ai",
+      "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "note": "只代表 Notebook 用户提供的链接；对应地址清单映射未完成核验，暂只识别声明。"
+    },
+    {
+      "token": "Google-Agent",
+      "provider": "Google 托管代理",
+      "purpose": "agent",
+      "feed": "google-agent",
+      "kind": "ai",
+      "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "note": "仅归属 Google 托管代理，不自动改名为 Gemini。"
+    },
+    {
+      "token": "Google-CloudVertexBot",
+      "provider": "Google Vertex AI",
+      "purpose": "other",
+      "feed": "",
+      "kind": "other",
+      "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "note": "站主请求的 Vertex AI 抓取单列，不计 Gemini 到访。"
+    }
+  ],
+  "sources": [
+    "https://developers.openai.com/api/docs/bots",
+    "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+    "https://support.claude.com/en/articles/18234133",
+    "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+    "https://docs.mistral.ai/robots",
+    "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+    "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+  ],
+  "limits": "平台清单覆盖与可核验请求覆盖分开。官方产品首页仅证明来源域名，不证明爬虫身份；社区文章、云服务网段、robots 控制标记和普通搜索爬虫不能作为专用 AI 身份证据。没有专用规则不显示零访问。用途为官方声明用途，不是训练、引用或收录结果。",
+  "feeds": {
+    "gptbot": "https://openai.com/gptbot.json",
+    "searchbot": "https://openai.com/searchbot.json",
+    "chatgpt-user": "https://openai.com/chatgpt-user.json",
+    "claude": "https://claude.com/crawling/bots.json",
+    "perplexitybot": "https://www.perplexity.ai/perplexitybot.json",
+    "perplexity-user": "https://www.perplexity.ai/perplexity-user.json",
+    "mistral-user": "https://mistral.ai/mistralai-user-ips.json",
+    "mistral-index": "https://mistral.ai/mistralai-index-ips.json",
+    "google-agent": "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json"
+  },
+  "non_request_tokens": [
+    "Google-Extended",
+    "Applebot-Extended"
+  ],
+  "platforms": [
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "referral_hosts": [
+        "doubao.com",
+        "www.doubao.com"
+      ],
+      "bots": [],
+      "coverage": "Bytespider 只作厂商声明，不能确认豆包产品访问。",
+      "sources": [
+        "https://doubao.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "referral_hosts": [
+        "chat.deepseek.com"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://chat.deepseek.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "qianwen",
+      "name": "千问",
+      "referral_hosts": [
+        "qianwen.com",
+        "www.qianwen.com",
+        "tongyi.aliyun.com",
+        "chat.qwen.ai"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://qianwen.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": [
+        "通义"
+      ]
+    },
+    {
+      "id": "kimi",
+      "name": "Kimi",
+      "referral_hosts": [
+        "kimi.com",
+        "www.kimi.com",
+        "kimi.moonshot.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://kimi.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "yuanbao",
+      "name": "元宝",
+      "referral_hosts": [
+        "yuanbao.tencent.com"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://yuanbao.tencent.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "wenxin",
+      "name": "文心",
+      "referral_hosts": [
+        "wenxin.baidu.com",
+        "yiyan.baidu.com"
+      ],
+      "bots": [],
+      "coverage": "Baiduspider 仅代表百度搜索声明，不能确认文心产品访问。",
+      "sources": [
+        "https://wenxin.baidu.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "zhipu",
+      "name": "智谱清言",
+      "referral_hosts": [
+        "chatglm.cn",
+        "www.chatglm.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://chatglm.cn/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "spark",
+      "name": "讯飞星火",
+      "referral_hosts": [
+        "xinghuo.xfyun.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://xinghuo.xfyun.cn/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "hunyuan",
+      "name": "腾讯混元",
+      "referral_hosts": [
+        "hunyuan.tencent.com"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://hunyuan.tencent.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "nami",
+      "name": "纳米 AI",
+      "referral_hosts": [
+        "n.cn",
+        "www.n.cn",
+        "work.n.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://n.cn/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "metaso",
+      "name": "秘塔 AI",
+      "referral_hosts": [
+        "metaso.cn",
+        "www.metaso.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://metaso.cn/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "referral_hosts": [
+        "agent.minimaxi.com",
+        "agent.minimax.cn"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://agent.minimaxi.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "openai",
+      "name": "ChatGPT / OpenAI",
+      "referral_hosts": [
+        "chatgpt.com",
+        "www.chatgpt.com",
+        "chat.openai.com"
+      ],
+      "bots": [
+        "GPTBot",
+        "OAI-SearchBot",
+        "ChatGPT-User"
+      ],
+      "coverage": "三类身份分别使用对应官方地址清单；GPTBot 属于 OpenAI 训练抓取。",
+      "sources": [
+        "https://developers.openai.com/api/docs/bots"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": [
+        "ChatGPT"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "referral_hosts": [
+        "claude.ai",
+        "www.claude.ai"
+      ],
+      "bots": [
+        "ClaudeBot",
+        "Claude-SearchBot",
+        "Claude-User",
+        "Claude-Agent"
+      ],
+      "coverage": "三类爬虫支持官方 IP 核验；Claude-Agent 浏览器单列，暂不作已核验。",
+      "sources": [
+        "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+        "https://support.claude.com/en/articles/18234133"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "referral_hosts": [
+        "gemini.google.com",
+        "notebook.google",
+        "notebooklm.google.com"
+      ],
+      "bots": [
+        "Google-GeminiNotebook"
+      ],
+      "coverage": "仅识别 Notebook 请求声明；Googlebot、Google-Agent 不直接归入 Gemini，Google-Extended 不是请求 UA。",
+      "sources": [
+        "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+        "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "copilot",
+      "name": "Copilot",
+      "referral_hosts": [
+        "copilot.microsoft.com",
+        "copilot.cloud.microsoft"
+      ],
+      "bots": [],
+      "coverage": "bingbot 仅代表 Bing 搜索声明，不能确认 Copilot 产品访问。",
+      "sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-overview"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "referral_hosts": [
+        "perplexity.ai",
+        "www.perplexity.ai"
+      ],
+      "bots": [
+        "PerplexityBot",
+        "Perplexity-User"
+      ],
+      "coverage": "搜索与用户触发访问分别使用对应官方地址清单。",
+      "sources": [
+        "https://docs.perplexity.ai/docs/resources/perplexity-crawlers"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "referral_hosts": [
+        "grok.com",
+        "www.grok.com"
+      ],
+      "bots": [],
+      "coverage": "未确认可接入的专用爬虫核验资料；X 普通来源不计为 Grok。",
+      "sources": [
+        "https://grok.com/",
+        "https://docs.x.ai/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "meta",
+      "name": "Meta AI",
+      "referral_hosts": [
+        "meta.ai",
+        "www.meta.ai"
+      ],
+      "bots": [],
+      "coverage": "官方爬虫文档本次访问受限，身份规则待核对；Facebook / Instagram 普通流量不计为 Meta AI。",
+      "sources": [
+        "https://www.meta.ai/",
+        "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "referral_hosts": [
+        "chat.mistral.ai"
+      ],
+      "bots": [
+        "MistralAI-User",
+        "MistralAI-Index",
+        "MistralAI-Training"
+      ],
+      "coverage": "用户触发与索引抓取支持官方 IP 核验，训练请求暂只识别声明。",
+      "sources": [
+        "https://docs.mistral.ai/robots"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "you",
+      "name": "You.com",
+      "referral_hosts": [
+        "you.com",
+        "www.you.com"
+      ],
+      "bots": [],
+      "coverage": "官方 bot 页面转到登录，专用身份待核对；不根据第三方清单启用 YouBot。",
+      "sources": [
+        "https://you.com/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "referral_hosts": [
+        "manus.im",
+        "www.manus.im"
+      ],
+      "bots": [],
+      "coverage": "未接入可核验的专用请求身份；来源浏览可按明确域名识别，不能由通用爬虫推算。",
+      "sources": [
+        "https://manus.im/"
+      ],
+      "reviewed_at": "2026-11-14",
+      "legacy_referral_labels": []
+    }
+  ]
+}
